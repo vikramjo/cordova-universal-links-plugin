@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<plugin id="cordova-plugin-deeplinks" version="1.3.2" xmlns="http://apache.org/cordova/ns/plugins/1.0">
+<plugin id="cordova-plugin-deeplinks" version="1.3.3" xmlns="http://apache.org/cordova/ns/plugins/1.0">
 
   <name>Cordova Deeplinks Plugin</name>
   <description>
@@ -29,7 +29,6 @@
   <hook src="hooks/beforePluginInstallHook.js" type="before_plugin_install" />
 
   <platform name="ios">
-    <hook src="hooks/iosBeforePrepareHook.js" type="before_prepare" />
 
 <!-- Plugin inclusion in Cordova config.xml  -->
     <config-file parent="/*" target="config.xml">

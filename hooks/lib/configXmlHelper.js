@@ -3,6 +3,8 @@ Helper class to read data from config.xml file.
 */
 var path = require('path');
 var xmlHelper = require('./xmlHelper.js');
+const cordova_ios = require('cordova-ios');
+
 var ANDROID = 'android';
 var IOS = 'ios';
 var CONFIG_FILE_NAME = 'config.xml';
@@ -105,10 +107,11 @@ function getConfigXmlFilePath() {
  * Get project name from config.xml
  */
 function getProjectName() {
-  var configFilePath = getConfigXmlFilePath();
-  var config = getCordovaConfigParser(configFilePath);
+  const projectRoot = context.opts.projectRoot;
+  const platformPath = path.join(projectRoot, 'platforms', 'ios');
+  const iosProject = new cordova_ios('ios', platformPath);
 
-  return config.name();
+  return path.basename(iosProject.locations.xcodeCordovaProj);
 }
 
 // endregion
