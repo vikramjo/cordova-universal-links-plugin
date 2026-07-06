@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines
 
+## 1.3.4
+* replaced ios app delegate with scene delegate because of ios platform 8 changes
+
+## 1.3.3
+* changes pursuant to ios platform 8 changes
+
+## 1.3.2
+* changed android initialize to pluginInitialize
+
 ## 1.3.1
 * updated and pinned xml2js due to a breaking change in a minor version release
 * changed dependency versioning
